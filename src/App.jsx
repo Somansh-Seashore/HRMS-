@@ -24,11 +24,11 @@ function App() {
 
   return (
     <Router>
-      <div className="flex h-screen bg-gray-100">
+      <div className="flex h-screen bg-gray-100 overflow-hidden">
         <Sidebar isOpen={sidebarOpen} closeSidebar={closeSidebar} />
-        <div className="flex-1 flex flex-col min-w-0">
+        <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
           <Navbar toggleSidebar={toggleSidebar} />
-          <main className="flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-y-auto overflow-x-hidden">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/employees" element={<EmployeeDirectory />} />
